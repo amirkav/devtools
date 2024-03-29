@@ -6,12 +6,18 @@
 # https://docs.aws.amazon.com/cli/latest/userguide/cliv2-migration-changes.html
 # AWS CLI v2 is no longer a python lib and does not require a specific boto3 version.
 # AWS CLI v2 provides the option to run inside a Docker container.
+
+
+#######################################
+### Instal awscli v2
 # There are two different options for installing AWS CLI v2:
-# Option 1: install as a max package: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+### Option 1: install as a max package: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target /
 
-# Option 2: install as a Docker image and run inside a container
+
+### Option 2: install as a Docker image and run inside a container
 # Follow this guide to install AWS CLI v2:
 # https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-docker.html
 

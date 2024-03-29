@@ -10,6 +10,9 @@
 # you can change the default shell to zsh using the following command:
 chsh -s /bin/zsh
 
+# Verify zsh is the default shell
+echo "$SHELL"
+
 #######################################
 ### Install oh-my-zsh
 # https://ohmyz.sh/#install

@@ -12,6 +12,7 @@ brew update && brew upgrade
 brew install git
 
 # Verify that Homebrew's installation is being prioritized
+exec "$SHELL"
 which git
 # Should return something like:
 # /opt/homebrew/bin/git

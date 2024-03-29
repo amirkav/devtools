@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 #######################################
+### (Step 0) Install XCode Developer Tools
+xcode-select --install
+
+
+#######################################
 ### (Step 1) Install & Configure Homebrew
 
 # Check to see if Homebrew is installed, and install it if it is not
@@ -35,5 +40,3 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 $(/opt/homebrew/bin/brew shellenv)
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 EOF
-
-# TODO: add more env vars such as those required by pipenv
