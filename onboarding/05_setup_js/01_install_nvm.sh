@@ -1,21 +1,10 @@
 # Install nvm
-echo 'Installing nvm by using homebrew'
-brew install nvm
+# Note that nvm is not compatible with Homebrew. Do not attempt to install nvm via Homebrew.
 
-# From nvm
-# Please note that upstream has asked us to make explicit managing
-# nvm via Homebrew is unsupported by them and you should check any
-# problems against the standard nvm install method prior to reporting.
+# Follow the instructions on nvm official page:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# You should create NVM's working directory if it doesn't exist:
-
-echo "Creating NVM's working directory it if doesn't exist"
-mkdir ~/.nvm
-
-echo 'Add the following to ~/.zshrc or your desired shell
-configuration file:'
-
-echo 'export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-'
+# Add the following to `~/.zprofile`
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
