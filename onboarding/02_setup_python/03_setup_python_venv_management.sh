@@ -1,8 +1,8 @@
-
 # I use PyEnv to manage multiple python installations and virtual environments.
 
 # Follow instructions here to install PyEnv: https://github.com/pyenv/pyenv
 brew install pyenv
+brew install pyenv-virtualenv
 
 # Add the following to ~/.zprofile
 export PYENV_ROOT="$HOME/.pyenv"
@@ -24,6 +24,8 @@ pyenv install -l
 pyenv versions
 
 # You can now create virtual environments using pyenv
+# Note that pyenv stores the virtual envs in a central directory, not inside the project directory.
+# So if you plan to create separate venvs for different repositories, include the repo name in the venv name.
 pyenv virtualenv 3.10.0 my-virtual-env
 
 # You can now activate the virtual environment using pyenv
@@ -43,4 +45,3 @@ pyenv uninstall 3.10.0
 # `pyenv shell` sets the PYENV_VERSION environment variable for that shell. AKA it's equivalent to export PYENV_VERSION=3.9.1 for example. That means that this is temporary - when the shell exits, this command is lost until next time.
 pyenv global 3.10.0
 pyenv local 3.10.0
-
